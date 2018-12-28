@@ -296,7 +296,7 @@ export default class Waypoint extends BaseClass {
       return <span ref={this.refElement} style={{ fontSize: 0 }} />;
     }
 
-    if (isDOMElement(children) || isForwardRef(children.type)) {
+    if (isDOMElement(children) || isForwardRef(children)) {
       const ref = (node) => {
         this.refElement(node);
         if (children.ref) {
